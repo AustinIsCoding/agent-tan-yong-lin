@@ -51,7 +51,8 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       id: 7,
-      imgUrl: "/assets/images/background2.jpg",
+      imgUrl:
+        "https://austiniscoding.github.io/agent-tan-yong-lin/assets/images/background2.jpg",
       alt: "Background 2",
       title: "Example Title 7",
       description: "Example Description 7",
