@@ -10,14 +10,16 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       id: 2,
-      imgUrl: "../assets/images/Lake_Bridge.jpg",
+      imgUrl:
+        "https://austiniscoding.github.io/agent-tan-yong-lin/assets/images/Lake_Bridge.jpg",
       alt: "Lake Bridge",
       title: "Example Title 2",
       description: "Example Description 2",
     },
     {
       id: 3,
-      imgUrl: "../assets/images/Consultanting.webp",
+      imgUrl:
+        "https://austiniscoding.github.io/agent-tan-yong-lin/assets/images/Consultanting.webp",
       alt: "Consultant",
       title: "Client Consultation",
       description:
@@ -25,28 +27,31 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       id: 4,
-      imgUrl: "../assets/images/Moon-Landscape.jpg",
+      imgUrl:
+        "https://austiniscoding.github.io/agent-tan-yong-lin/assets/images/Moon-Landscape.jpg",
       alt: "Moon Landscape",
       title: "Example Title 4",
       description: "Example Description 4",
     },
     {
       id: 5,
-      imgUrl: "../assets/images/Night_Sky.avif",
+      imgUrl:
+        "https://austiniscoding.github.io/agent-tan-yong-lin/assets/images/Night_Sky.avif",
       alt: "Night Sky",
       title: "Example Title 5",
       description: "Example Description 5",
     },
     {
       id: 6,
-      imgUrl: "../assets/images/ranger-4df6c1b6.avif",
+      imgUrl:
+        "https://austiniscoding.github.io/agent-tan-yong-lin/assets/images/ranger-4df6c1b6.avif",
       alt: "Consulting",
       title: "Example Title 6",
       description: "Example Description 6",
     },
     {
       id: 7,
-      imgUrl: "../assets/images/background2.jpg",
+      imgUrl: "/assets/images/background2.jpg",
       alt: "Background 2",
       title: "Example Title 7",
       description: "Example Description 7",
