@@ -207,6 +207,10 @@ button {
   width: 100%;
 }
 
+.nav-toggle {
+  display: none;
+}
+
 /* Profile Section */
 
 .profile-section {
