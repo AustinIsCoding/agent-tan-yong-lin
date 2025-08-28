@@ -856,7 +856,7 @@ button {
   }
 
   .images.center {
-    left: 9%;
+    left: 8%;
   }
 
   .images.left1,
@@ -873,7 +873,7 @@ button {
   .desc-container {
     width: auto;
     height: auto;
-    left: 10%;
+    left: 9%;
     max-width: 280px;
     max-height: 320px;
     min-width: 280px;
@@ -891,12 +891,12 @@ button {
 
   .prev {
     position: absolute;
-    left: 10px;
+    left: -1px;
   }
 
   .next {
     position: absolute;
-    right: 10px;
+    right: -1px;
   }
 
   .contact-wrapper {
