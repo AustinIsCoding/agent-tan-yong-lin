@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const data = [
     {
       id: 1,
-      imgUrl: "../assets/images/background.jpg",
+      imgUrl: "/assets/images/background.jpg",
       alt: "Anime Background",
       title: "Example Title 1",
       description: "Example Description 1",
