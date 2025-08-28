@@ -856,7 +856,7 @@ button {
   }
 
   .images.center {
-    left: 7%;
+    left: 6.8%;
   }
 
   .images.left1,
@@ -873,7 +873,7 @@ button {
   .desc-container {
     width: auto;
     height: auto;
-    left: 8%;
+    left: 7.8%;
     max-width: 280px;
     max-height: 320px;
     min-width: 280px;
