@@ -547,15 +547,15 @@ button {
 }
 
 .images.center {
-  left: 34%;
+  top: 50%;
   z-index: 3;
   opacity: 1;
-  transform: rotateY(0deg) scale(0.7) translateY(-180px);
+  transform: rotateY(0deg) scale(0.7) translateY(-310px);
   box-shadow: var(--shadow-xl);
 }
 
 .images.center:hover {
-  transform: rotateY(0deg) scale(0.7) translateY(-185px);
+  transform: rotateY(0deg) scale(0.7) translateY(-315px);
   box-shadow: var(--shadow-2xl);
 }
 
@@ -592,8 +592,6 @@ button {
 
 .desc-container {
   position: absolute;
-  left: 36%;
-  top: 22.5%;
   z-index: 2;
   width: auto;
   height: auto;
@@ -612,7 +610,7 @@ button {
   background: var(--primary-light);
   transition: opacity 350ms ease, transform 350ms ease;
   opacity: 1;
-  transform: translateY(0);
+  transform: translateX(0);
   pointer-events: auto;
   will-change: opacity, transform;
 }
@@ -637,8 +635,14 @@ button {
 .next-prev-nav {
   width: 100%;
   display: flex;
+  flex-direction: row;
   padding: var(--spacing-xl);
   justify-content: space-between;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  align-items: center;
 }
 
 .next-prev-nav i {
@@ -855,10 +859,6 @@ button {
     height: 200px;
   }
 
-  .images.center {
-    left: 6.5%;
-  }
-
   .images.left1,
   .images.left2,
   .images.right1,
@@ -873,7 +873,6 @@ button {
   .desc-container {
     width: auto;
     height: auto;
-    left: 7.5%;
     max-width: 280px;
     max-height: 320px;
     min-width: 280px;
@@ -882,21 +881,13 @@ button {
   }
 
   .next-prev-nav {
-    position: relative;
+    position: absolute;
+    top: 50%;
+    justify-content: space-between;
   }
 
   .next-prev-nav i {
     font-size: 1.5rem;
-  }
-
-  .prev {
-    position: absolute;
-    left: -1px;
-  }
-
-  .next {
-    position: absolute;
-    right: -1px;
   }
 
   .contact-wrapper {
