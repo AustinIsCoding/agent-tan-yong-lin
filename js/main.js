@@ -477,26 +477,26 @@
   // =============================================
   // Lazy Loading
   // =============================================
-  function initializeLazyLoading() {
-    const images = document.querySelectorAll('img[loading="lazy"]');
+  //   function initializeLazyLoading() {
+  //     const images = document.querySelectorAll('img[loading="lazy"]');
 
-    if ("IntersectionObserver" in window) {
-      const imageObserver = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const img = entry.target;
-            img.src = img.dataset.src || img.src;
-            img.classList.remove("lazy");
-            imageObserver.unobserve(img);
-          }
-        });
-      });
+  //     if ("IntersectionObserver" in window) {
+  //       const imageObserver = new IntersectionObserver((entries) => {
+  //         entries.forEach((entry) => {
+  //           if (entry.isIntersecting) {
+  //             const img = entry.target;
+  //             img.src = img.dataset.src || img.src;
+  //             img.classList.remove("lazy");
+  //             imageObserver.unobserve(img);
+  //           }
+  //         });
+  //       });
 
-      images.forEach((img) => {
-        imageObserver.observe(img);
-      });
-    }
-  }
+  //       images.forEach((img) => {
+  //         imageObserver.observe(img);
+  //       });
+  //     }
+  //   }
 
   // =============================================
   // Scroll to Top
