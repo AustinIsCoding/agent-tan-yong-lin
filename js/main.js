@@ -20,7 +20,7 @@
     initializeMobileMenu();
     initializeScrollToTop();
     initializeParallax();
-    initializeLazyLoading();
+    // initializeLazyLoading();
     initializeTypingEffect();
     initializeCounters();
     initializeTilt();
