@@ -209,6 +209,17 @@ button {
 
 .nav-toggle {
   display: none;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.nav-toggle span {
+  width: 25px;
+  height: 3px;
+  background: var(--gray-600);
+  border-radius: 2px;
+  transition: var(--transition-normal);
 }
 
 /* Profile Section */
@@ -850,6 +861,10 @@ button {
     grid-template-columns: 1fr;
   }
 
+  .profile-actions {
+    justify-content: center;
+  }
+
   .profile-social {
     justify-content: center;
   }
@@ -905,7 +920,7 @@ button {
   }
 
   .contact-form {
-    height: 1040px;
+    height: 1050px;
   }
 
   .footer-content {
