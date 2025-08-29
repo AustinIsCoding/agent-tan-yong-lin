@@ -861,6 +861,12 @@ button {
     grid-template-columns: 1fr;
   }
 
+  .about-text h2,
+  .image-section h2,
+  .contact-text h2 {
+    font-size: 2rem;
+  }
+
   .profile-actions {
     justify-content: center;
   }
@@ -920,7 +926,7 @@ button {
   }
 
   .contact-form {
-    height: 1050px;
+    height: 1070px;
   }
 
   .footer-content {
