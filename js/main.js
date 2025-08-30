@@ -46,9 +46,6 @@
           if (targetElement) {
             smoothScrollTo(targetElement, 80); // Account for navbar height
 
-            // Update active state
-            updateActiveNavLink(targetId);
-
             // Close mobile menu if open
             if (mobileMenuOpen) {
               toggleMobileMenu();
@@ -87,22 +84,6 @@
     );
   }
 
-  //   function updateActiveNavLink(activeId) {
-  //     const navLinks = document.querySelectorAll(".nav-link");
-
-  //     navLinks.forEach((link) => {
-  //       link.classList.remove("active");
-
-  //       const href = link.getAttribute("href");
-  //       if (
-  //         href === `#${activeId}` ||
-  //         (activeId === "home" && href === "#home")
-  //       ) {
-  //         link.classList.add("active");
-  //       }
-  //     });
-  //   }
-
   function updateNavigationOnScroll() {
     const sections = document.querySelectorAll("section[id]");
     const scrollPosition = window.pageYOffset + 150;
@@ -118,7 +99,6 @@
       ) {
         if (currentSection !== sectionId) {
           currentSection = sectionId;
-          updateActiveNavLink(sectionId);
         }
       }
     });
