@@ -1,33 +1,25 @@
-// Elite Insurance - Main JavaScript Functionality
-
 (function () {
   "use strict";
 
-  // =============================================
   // Global Variables
-  // =============================================
   let isScrolling = false;
   let currentSection = "home";
   let mobileMenuOpen = false;
 
-  // =============================================
   // DOM Content Loaded Event
-  // =============================================
   document.addEventListener("DOMContentLoaded", function () {
     initializeNavigation();
     initializeScrollEffects();
     initializeAnimations();
     initializeMobileMenu();
     initializeScrollToTop();
-    initializeParallax();
+
     // initializeLazyLoading();
     initializeTypingEffect();
     initializeCounters();
     initializeTilt();
   });
-  // =============================================
   // Navigation Functions
-  // =============================================
   function initializeNavigation() {
     const navbar = document.querySelector(".navbar");
     const navLinks = document.querySelectorAll(".nav-link");
@@ -44,7 +36,7 @@
           const targetElement = document.getElementById(targetId);
 
           if (targetElement) {
-            smoothScrollTo(targetElement, 80); // Account for navbar height
+            smoothScrollTo(targetElement, 80);
 
             // Close mobile menu if open
             if (mobileMenuOpen) {
@@ -104,9 +96,7 @@
     });
   }
 
-  // =============================================
   // Mobile Menu Functions
-  // =============================================
   function initializeMobileMenu() {
     const mobileToggle = document.querySelector(".nav-toggle");
     const navMenu = document.querySelector(".nav-menu");
@@ -178,9 +168,7 @@
     }
   }
 
-  // =============================================
   // Scroll Effects
-  // =============================================
   function initializeScrollEffects() {
     const scrollElements = document.querySelectorAll(
       ".scroll-reveal, [data-aos]"
@@ -228,9 +216,7 @@
     handleScrollAnimation();
   }
 
-  // =============================================
   // Animation Functions
-  // =============================================
   function initializeAnimations() {
     // Initialize staggered animations
     const animatedElements = document.querySelectorAll(
@@ -277,9 +263,7 @@
     });
   }
 
-  // =============================================
   // Timeline Animation
-  // =============================================
   //   function initializeTimeline() {
   //     const timelineItems = document.querySelectorAll(".timeline-item");
 
@@ -311,9 +295,7 @@
   //     }
   //   }
 
-  // =============================================
   // Typing Effect
-  // =============================================
   function initializeTypingEffect() {
     const typingElements = document.querySelectorAll(".typing-effect");
 
@@ -355,9 +337,7 @@
     });
   }
 
-  // =============================================
   // Counter Animation
-  // =============================================
   function initializeCounters() {
     const counters = document.querySelectorAll(".stat-number");
 
@@ -397,9 +377,7 @@
     });
   }
 
-  // =============================================
   // Tilt Effect
-  // =============================================
   function initializeTilt() {
     const tiltElements = document.querySelectorAll(
       ".card-tilt, .profile-image-3d"
@@ -433,30 +411,7 @@
     element.style.transform = "";
   }
 
-  // =============================================
-  // Parallax Effect
-  // =============================================
-  function initializeParallax() {
-    const parallaxElements = document.querySelectorAll(".parallax");
-
-    if (parallaxElements.length === 0) return;
-
-    window.addEventListener(
-      "scroll",
-      throttle(() => {
-        const scrolled = window.pageYOffset;
-
-        parallaxElements.forEach((element) => {
-          const rate = scrolled * -0.5;
-          element.style.transform = `translateY(${rate}px)`;
-        });
-      }, 16)
-    );
-  }
-
-  // =============================================
   // Lazy Loading
-  // =============================================
   //   function initializeLazyLoading() {
   //     const images = document.querySelectorAll('img[loading="lazy"]');
 
@@ -478,9 +433,7 @@
   //     }
   //   }
 
-  // =============================================
   // Scroll to Top
-  // =============================================
   function initializeScrollToTop() {
     // Create scroll to top button
     const scrollTopBtn = document.createElement("button");
@@ -540,9 +493,7 @@
     });
   }
 
-  // =============================================
   // Utility Functions
-  // =============================================
   function smoothScrollTo(element, offset = 0) {
     const targetPosition = element.offsetTop - offset;
     const startPosition = window.pageYOffset;
@@ -600,9 +551,7 @@
     };
   }
 
-  // =============================================
   // Performance Monitoring
-  // =============================================
   function initializePerformanceMonitoring() {
     // Monitor page load performance
     window.addEventListener("load", () => {
@@ -626,75 +575,6 @@
     });
   }
 
-  // =============================================
-  // Accessibility Enhancements
-  // =============================================
-  function initializeAccessibility() {
-    // Skip to content link
-    const skipLink = document.createElement("a");
-    skipLink.href = "#main-content";
-    skipLink.textContent = "Skip to main content";
-    skipLink.className = "sr-only";
-    skipLink.style.cssText = `
-            position: absolute;
-            top: -40px;
-            left: 6px;
-            background: #2563eb;
-            color: white;
-            padding: 8px;
-            text-decoration: none;
-            border-radius: 4px;
-            z-index: 10000;
-        `;
-
-    skipLink.addEventListener("focus", () => {
-      skipLink.style.top = "6px";
-    });
-
-    skipLink.addEventListener("blur", () => {
-      skipLink.style.top = "-40px";
-    });
-
-    document.body.insertBefore(skipLink, document.body.firstChild);
-
-    // Enhanced keyboard navigation
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape") {
-        if (mobileMenuOpen) {
-          toggleMobileMenu();
-        }
-      }
-    });
-
-    // Focus management for modal/menu states
-    const focusableElements =
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
-
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "Tab" && mobileMenuOpen) {
-        const navMenu = document.querySelector(".nav-menu");
-        const focusable = navMenu.querySelectorAll(focusableElements);
-        const firstFocusable = focusable[0];
-        const lastFocusable = focusable[focusable.length - 1];
-
-        if (e.shiftKey) {
-          if (document.activeElement === firstFocusable) {
-            lastFocusable.focus();
-            e.preventDefault();
-          }
-        } else {
-          if (document.activeElement === lastFocusable) {
-            firstFocusable.focus();
-            e.preventDefault();
-          }
-        }
-      }
-    });
-  }
-
-  // Initialize accessibility features
-  initializeAccessibility();
-
   // Initialize performance monitoring in development
   if (
     window.location.hostname === "localhost" ||
@@ -703,17 +583,13 @@
     initializePerformanceMonitoring();
   }
 
-  // =============================================
   // Error Handling
-  // =============================================
   window.addEventListener("error", (e) => {
     console.error("JavaScript Error:", e.error);
     // Could implement error reporting here
   });
 
-  // =============================================
   // Resize Handler
-  // =============================================
   window.addEventListener(
     "resize",
     debounce(() => {
@@ -727,9 +603,7 @@
     }, 250)
   );
 
-  // =============================================
   // Export functions for global access
-  // =============================================
   window.EliteInsurance = {
     smoothScrollTo,
     throttle,
